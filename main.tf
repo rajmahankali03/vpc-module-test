@@ -1,9 +1,12 @@
 module "vpc" {
 
-    source = "../terraform-aws-vpc"
-  /* project     = "roboshop"
-  environment = "dev"
-  public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]*/
+  #  source = "../terraform-aws-vpc"
+    source = "git::https://github.com/rajmahankali03/terraform-aws-vpc.git?ref=main" # Use the forked repo
+
+   /* project     = "roboshop"
+    environment = "dev"*/
+
+  #public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
 
     project = var.project
     environment = var.environment
